@@ -1,24 +1,19 @@
 //IMPORTS
 const express = require('express');
 const router = express.Router();
+const { getAll, getById } = require('../controllers/eventosController.js')
 
 //MONGOOSE
 const Eventos = require('../models/eventoModel');
 const { checkAdmin } = require('../middlewares/checkAdmin');
 
 
+
+
 //RUTAS
-router.get('/eventos', async (req, res) => {
+router.get('/eventos', getAll);
 
-    const eventos = await Eventos.find()
-    console.log(eventos)
-    res.json(eventos)
-})
-
-router.get('/eventos/:id', async (req, res) => {
-    const eventoEncontrado = Eventos.findById(req.params.id)
-    res.json(eventoEncontrado);
-})
+router.get('/evento/:id', getById);
 
 router.post('/eventos', async (req, res) => {
     const { title, shortDescript, largeDescript, date, organizer, location, state } = req.body;

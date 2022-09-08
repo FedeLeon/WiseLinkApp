@@ -1,6 +1,7 @@
  const express = require ('express')
  const morgan = require('morgan')
  const path = require('path')
+ const cors = require('cors');
 
 const { mongoose } = require('./database');
 
@@ -12,6 +13,7 @@ app.set('port', process.env.PORT || 8080 )
 //Middlewares
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(cors());
 
 //Rutas
 app.use('/api', require('./routes/routes'))
