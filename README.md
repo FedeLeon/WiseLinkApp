@@ -8,9 +8,16 @@ Repositorio del ejercicio para WiseLink
 
 ---ACLARACIONES---
 
+- El proyecto lo desarrolle con una estructura MERN en Javascript, MongoDB para la base de datos(en la nube), Express para ejecutar el servidor local para la API, React para el front y NodeJs para la ejecucion de todo el entorno.
+- Todas las rutas del CRUD de administrador fueron probadas y funcionan correctamente (alta, baja, modificacion, eliminar), pero pueden ser probadas desde peticiones(PostMan,RapidAPI,etc..) ya que no llegué con el tiempo a hacer el crud de admin desde front.
+- En toda la app se respeta la estructura JSON de los eventos (titulo, descripcion corta, descripcion larga, fecha y hora, lugar, etc.. ).
+- Por cuestiones de tiempo no llegue a hacer la funcion de que solo el admin pueda ver los eventos con estado borrador, mi idea era poder ejecutar el entorno bajo dos variables de entorno (una para usuarios y otra para administradores), en este caso todas las funciones pueden ser probadas libremente.
+- Los usuarios pueden visualizar todos los eventos pero solo inscribirse en eventos futuros, en los eventos ya pasados se deshabilita el boton de inscripcion.
+- Todos los eventos a los que el usuario se inscribe se guardan en una coleccion aparte en la base de datos.
+- Desde la home se pueden filtrar todos los eventos disponibles por fecha, titulo o estado.
+- Desde el menu de usuario se pueden visualizar los eventos inscriptos, no llegue a ponerle el filtro por completados o activos pero mi idea era poner un filtro igual al de la home pero con una logica igual a la del boton de inscripcion que filtre si son eventos pasados o futuros.
 
-
-Detalle del desarrollo
+---Detalle del desarrollo---
 - Estructura MERN
 - Servidor con Express
 - Conexion a Base de Datos en Mongo Atlas
