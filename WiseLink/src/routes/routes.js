@@ -1,7 +1,8 @@
 //IMPORTS
 const express = require('express');
 const router = express.Router();
-const { getAll, getById } = require('../controllers/eventosController.js')
+const { getAll, getById, saveEvento, deleteEvento } = require('../controllers/eventosController.js')
+const { saveInscripcion, getAllInscripciones } = require('../controllers/inscripcionController')
 
 //MONGOOSE
 const Eventos = require('../models/eventoModel');
@@ -10,17 +11,12 @@ const { checkAdmin } = require('../middlewares/checkAdmin');
 
 
 
-//RUTAS
+//RUTAS EVENTOS
 router.get('/eventos', getAll);
 
-router.get('/evento/:id', getById);
+router.get('/eventos/:id', getById);
 
-router.post('/eventos', async (req, res) => {
-    const { title, shortDescript, largeDescript, date, organizer, location, state } = req.body;
-    const nuevoEvento = new Eventos({ title, shortDescript, largeDescript, date, organizer, location, state })
-    await nuevoEvento.save();
-    res.json({ status: 'Evento guardado' })
-})
+router.post('/eventos', saveEvento);
 
 router.put('/eventos/:id', async (req, res) => {
     const { title, shortDescript, largeDescript, date, organizer, location, state } = req.body;
@@ -29,9 +25,14 @@ router.put('/eventos/:id', async (req, res) => {
     res.json({ status: 'Evento actualizado' })
 })
 
-router.delete('/eventos/:id', async (req, res) => {
-    await Eventos.findByIdAndDelete(req.params.id)
-    res.json({ status: 'Evento eliminado' })
-})
+router.delete('/eventos/:id', deleteEvento);
+
+
+//RUTAS INSCRIPCION
+router.post('/eventos/inscripcion', saveInscripcion);
+
+router.get('/user/inscripcion', getAllInscripciones);
+
+
 
 module.exports = router;

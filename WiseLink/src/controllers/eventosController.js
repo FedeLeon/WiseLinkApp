@@ -7,7 +7,7 @@ const Evento = new Eventos
 
 //----CONTROLLERS
 
-//Devuelve todos los eventos
+// Devuelve todos los eventos
 const getAll = async (req, res) => {
     try {
         res.json(await Evento.getAll());
@@ -32,5 +32,29 @@ const getById = async (req, res) => {
     }
 }
 
-module.exports = { getAll, getById }
+// Recibe un evento nuevo y lo guarda en la base de datos
+const saveEvento = async (req, res) => {
+    const { title, shortDescript, largeDescript, date, organizer, location, state } = req.body;
+    const nuevoEvento = { title, shortDescript, largeDescript, date, organizer, location, state }
+    await Evento.save(nuevoEvento);
+    res.json({ status: 'Evento guardado' })
+}
+
+// Recibe un id y elimina el evento con ese id
+
+const deleteEvento = async (req, res) => {
+    try {
+    const id = String(req.params.id);
+    await Evento.deleteById(id)
+    res.json({ status: 'Evento eliminado' })
+    } catch (e) { 
+        res.status(500).json({ error: e });
+    }
+}
+
+
+
+
+
+module.exports = { getAll, getById, saveEvento, deleteEvento }
 
