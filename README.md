@@ -17,6 +17,9 @@ Detalle del desarrollo
 - Visualizacion detallada del evento al abrirlo
 - Boton de inscripcion lleva a un modal con el formulario
 - Boton de inscripcion se bloquea si el evento es pasado
+- Agregados los metodos, controladores y rutas para las inscripciones a eventos del formulario
+- Agregados modelos de mongoose para inscripciones
+- Correcta conexion con la base de datos
 - Agregado menu de usuario
 - Agregadas las tarjetas a menu de usuario para visualizar los eventos inscriptos
 - Agregados los filtros en Home, se pueden filtrar los eventos por nombre, fecha y estado
