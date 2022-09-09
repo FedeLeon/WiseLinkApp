@@ -2,8 +2,8 @@
 Repositorio del ejercicio para WiseLink
 
 Para su ejecucion:
-1- Iniciar el servidor Express junto a la base de datos desde la terminal en la carpeta API con el comando "npm start"
-2- Iniciar la App de React desde la terminal en la carpeta My-app con el comando "npm start"
+- Iniciar el servidor Express junto a la base de datos desde la terminal en la carpeta API con el comando "npm start"
+- Iniciar la App de React desde la terminal en la carpeta My-app con el comando "npm start"
 
 Detalle del desarrollo
 - Estructura MERN
