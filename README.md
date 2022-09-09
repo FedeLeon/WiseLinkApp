@@ -18,6 +18,10 @@ Repositorio del ejercicio para WiseLink
 - Desde el menu de usuario se pueden visualizar los eventos inscriptos, no llegue a ponerle el filtro por completados o activos pero mi idea era poner un filtro igual al de la home pero con una logica igual a la del boton de inscripcion que filtre si son eventos pasados o futuros.
 - La funcionalidad general de la App fue testeada manualmente y funciona correctamente, con mas tiempo podria testearla con librerias de testing y agregarle validaciones 
 
+---Dependencias usadas---
+- Backend: cors, express, mongoose, morgan
+- Frontend: react, material-ui, axios, react-router-dom
+
 ---Detalle del desarrollo---
 - Estructura MERN
 - Servidor con Express
