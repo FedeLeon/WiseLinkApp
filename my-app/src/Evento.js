@@ -8,20 +8,19 @@ const axios = require("axios");
 function Evento() {
 
   const { id } = useParams()
-  console.log(id)
 
   const [evento, setEvento] = useState([]);
 
   useEffect(() => {
     const obtenerEvento = async () => {
-      const respuesta = await axios.get(`http://localhost:8080/api/evento/${id}`);
+      const respuesta = await axios.get(`http://localhost:8080/api/eventos/${id}`);
       setEvento(respuesta.data);
     };
     obtenerEvento();
   }, []);
 
   return (
-    <div>
+    <div className='eventoContainer'>
         <Header />
         <CardIndividual 
         title={evento.title}

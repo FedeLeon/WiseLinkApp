@@ -14,7 +14,8 @@ function Header() {
 
       <Link to="/user">
         <IconButton>
-          <PersonIcon className='header__icon' fontSize='large' />
+          <PersonIcon className='header__icon' fontSize='small'/>
+          MENU DE USUARIO
         </IconButton>
       </Link>
 
@@ -22,6 +23,7 @@ function Header() {
         <img src='https://media-exp1.licdn.com/dms/image/C4D0BAQEtd6Oj3mCgZw/company-logo_200_200/0/1642014392748?e=2147483647&v=beta&t=3bmdMj0SDWpM0zT1Z5KBErtvSqe0lnV3h2tA5w-uKFc'
           alt='logo'
           className='header__logo' />
+          HOME
       </Link>
 
       <Link to="/chats">

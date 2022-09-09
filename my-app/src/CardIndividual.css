@@ -16,3 +16,7 @@
 .textfield {
     width: 100%;
 }
+
+.cardIndividual__container {
+    background-color: rgb(173, 185, 197);
+}
