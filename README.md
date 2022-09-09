@@ -16,6 +16,7 @@ Repositorio del ejercicio para WiseLink
 - Todos los eventos a los que el usuario se inscribe se guardan en una coleccion aparte en la base de datos.
 - Desde la home se pueden filtrar todos los eventos disponibles por fecha, titulo o estado.
 - Desde el menu de usuario se pueden visualizar los eventos inscriptos, no llegue a ponerle el filtro por completados o activos pero mi idea era poner un filtro igual al de la home pero con una logica igual a la del boton de inscripcion que filtre si son eventos pasados o futuros.
+- La funcionalidad general de la App fue testeada manualmente y funciona correctamente, con mas tiempo podria testearla con librerias de testing y agregarle validaciones 
 
 ---Detalle del desarrollo---
 - Estructura MERN
